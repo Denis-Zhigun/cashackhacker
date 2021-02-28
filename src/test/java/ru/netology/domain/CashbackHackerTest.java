@@ -1,12 +1,11 @@
 package ru.netology.domain;
+import org.junit.Test;
 
-import org.testng.annotations.Test;
+import static org.junit.Assert.assertEquals;
 
-import static org.testng.Assert.*;
 
-class CashbackHackerTest {
+public class CashbackHackerTest {
     public CashbackHacker cashbackHacker = new CashbackHacker();
-
 
     @Test
     void shouldCashBackSum900() {
@@ -22,13 +21,13 @@ class CashbackHackerTest {
     }
     @Test
     void shouldCashBackSum5000() {
-        int actual = cashbackHacker.remain(5000);  // Тест падает
+        int actual = cashbackHacker.remain(5000);
         int expected = 0;
         assertEquals(actual,expected);
     }
     @Test
     void shouldCashBackSum1000() {
-        int actual = cashbackHacker.remain(1000); // Тест падает
+        int actual = cashbackHacker.remain(1000);// test failed
         int expected = 0;
         assertEquals(actual,expected);
     }
@@ -36,7 +35,7 @@ class CashbackHackerTest {
     void shouldCashBackSum1100() {
         int actual = cashbackHacker.remain(1100);
         int expected = 900;
-        assertEquals(actual,expected);
+        assertEquals(actual,expected);;
     }
     @Test
     void shouldCashBackSum5500() {
@@ -44,7 +43,6 @@ class CashbackHackerTest {
         int expected = 500;
         assertEquals(actual,expected);
     }
-
 
 
 }
